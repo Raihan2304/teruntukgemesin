@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .surprise-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .heart {
+    color: #ff4d6a;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff4d6a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #ff355f;
+  }
+
+  /* Added styles for the popup */
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .popup-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+</style>
+<title>Kejutan untuk Pacar</title>
+</head>
+<body>
+  <div class="surprise-box">
+    <span class="heart">❤️</span>
+    <h1>Selamat datang gemesin</h1>
+    <p>Terima kasih telah menjadi sesuatu yang berharga, bahkan sebuah kata tak bisa menggambarkan dirimu</p>
+    <button class="button" id="openPopup">Buka Kejutan</button>
+  </div>
+
+  <!-- Popup -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h2>Halloo... Gemesin..❤️</h2>
+      <p>Maafin aku ya kalok bikin ribet,risih, dan bikin aneh
+        <hr>by:Raihan23
+      </p>
+      <button class="button" id="closePopup">Tutup</button>
+    </div>
+  </div>
+
+  <script>
+    const openPopupButton = document.getElementById("openPopup");
+    const closePopupButton = document.getElementById("closePopup");
+    const popup = document.getElementById("popup");
+
+    openPopupButton.addEventListener("click", () => {
+      popup.style.display = "flex";
+    });
+
+    closePopupButton.addEventListener("click", () => {
+      popup.style.display = "none";
+    });
+  </script>
+</body>
+</html>
